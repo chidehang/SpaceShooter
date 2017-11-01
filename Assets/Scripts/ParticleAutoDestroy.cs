@@ -9,7 +9,9 @@ public class ParticleAutoDestroy : MonoBehaviour {
     // Use this for initialization
     void Start () {
         particals = GetComponentsInChildren<ParticleSystem>();
-        GetComponent<AudioSource>().Play();
+        AudioSource audio = GetComponent<AudioSource>();
+        if (audio)
+            audio.Play();
 
     }
 	
